@@ -22,6 +22,6 @@ Stáhli jsme si potřebné knihovny a začali studovat dokumentaci potřebných 
 > 11.4.2024
 
 ```
-Poslední týden pracujeme na vytvoření všech Pages (R), máme problém s accreditation_id u čehož si nevíme rady co přesně to je a jestli to má být unikátní ID.
+Poslední týden pracujeme na vytvoření všech Pages (R), máme problém s ID u čehož si nevíme rady co přesně to je a jestli to má být unikátní ID.
 Tvoříme první základní strukturu našich Pages a pracujeme s daty k nim přiřazeným.
 ```
