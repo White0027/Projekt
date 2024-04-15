@@ -1,7 +1,7 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
 const query = `query($id: UUID!){
-  acProgramById(id: $id) {
+  result: acProgramById(id: $id) {
     __typename
     id
    
