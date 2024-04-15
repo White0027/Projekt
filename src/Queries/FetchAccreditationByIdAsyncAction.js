@@ -7,8 +7,6 @@ const query = `query($id: UUID!){
    
     lastchange
     created
-    changedby { id }
-    createdby { id }
    
     name
     nameEn
