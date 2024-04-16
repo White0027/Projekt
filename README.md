@@ -1,6 +1,6 @@
 # Projekt
 -  Granting 
--  Urban + Begy + Kubešová
+-  Urban + Begy + Kubešova
 
 
 # Harmonogram
