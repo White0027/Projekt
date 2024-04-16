@@ -2,7 +2,7 @@ import {
 createBrowserRouter,
 RouterProvider,
 } from "react-router-dom";
-import { GroupPage, UserPage } from "./Pages";
+import { GroupClassificationPage, GroupPage, SemesterPage, UserClassificationPage, UserPage } from "./Pages";
 import { SearchPage } from "./Pages/SearchPage";
 import { EventPage } from "./Pages/EventPage";
 import { EventEditPage } from "./Pages/EventEditPage";
@@ -32,27 +32,27 @@ export const Routes = [
         errorElement: <SearchPage />,
     },
     {
-        path: "/granting/accreditation/view/:id",
+        path: "/accreditation/view/:id",
         element: <AccreditationPage />,
         errorElement: <SearchPage />,
     },
     {
-        path: "/granting/subject/view/:id",
+        path: "/subject/view/:id",
         element: <SubjectPage />,
         errorElement: <SearchPage />,
     },
     {
-        path: "/granting/semester/view/:id",
+        path: "/semester/view/:id",
         element: <SemesterPage />,
         errorElement: <SearchPage />,
     },
     {
-        path: "/granting/userclassification/view/:id",
+        path: "/userclassification/view/:id",
         element: <UserClassificationPage />,
         errorElement: <SearchPage />,
     },
     {
-        path: "/granting/groupclassification/view/:id",
+        path: "/groupclassification/view/:id",
         element: <GroupClassificationPage />,
         errorElement: <SearchPage />,
     },
@@ -73,7 +73,7 @@ export const Routes = [
     },    
 ]
 
-const router = createBrowserRouter(Routes, {basename: "/ug"});
+const router = createBrowserRouter(Routes, {basename: "/granting"});
 // const router = createBrowserRouter(Routes);
 
 export const AppRouter = () => <RouterProvider router={router} />
