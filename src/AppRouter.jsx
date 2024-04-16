@@ -1,6 +1,6 @@
 import {
-  createBrowserRouter,
-  RouterProvider,
+createBrowserRouter,
+RouterProvider,
 } from "react-router-dom";
 import { GroupPage, UserPage } from "./Pages";
 import { SearchPage } from "./Pages/SearchPage";
@@ -32,27 +32,27 @@ export const Routes = [
         errorElement: <SearchPage />,
     },
     {
-        path: "/granting/accreditation/view/:accreditation_id",
+        path: "/granting/accreditation/view/:id",
         element: <AccreditationPage />,
         errorElement: <SearchPage />,
     },
     {
-        path: "/granting/subject/view/:subject_id",
+        path: "/granting/subject/view/:id",
         element: <SubjectPage />,
         errorElement: <SearchPage />,
     },
     {
-        path: "/granting/semester/view/:semester_id",
+        path: "/granting/semester/view/:id",
         element: <SemesterPage />,
         errorElement: <SearchPage />,
     },
     {
-        path: "/granting/userclassification/view/:user_id",
+        path: "/granting/userclassification/view/:id",
         element: <UserClassificationPage />,
         errorElement: <SearchPage />,
     },
     {
-        path: "/granting/groupclassification/view/:group_id",
+        path: "/granting/groupclassification/view/:id",
         element: <GroupClassificationPage />,
         errorElement: <SearchPage />,
     },
@@ -67,9 +67,9 @@ export const Routes = [
         errorElement: <SearchPage />,
     },
     {
-      path: "/search/:phrase",
-      element: <SearchPage />,
-      errorElement: <SearchPage />,
+    path: "/search/:phrase",
+    element: <SearchPage />,
+    errorElement: <SearchPage />,
     },    
 ]
 

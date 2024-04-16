@@ -4,13 +4,13 @@ const query = `query($id: UUID!){
   result: acProgramById(id: $id) {
     __typename
     id
-   
+  
     lastchange
     created
-   
+  
     name
     nameEn
-   
+  
     type { id name }
     subjects {
       id
@@ -18,7 +18,7 @@ const query = `query($id: UUID!){
       semesters {
         id
         order
-       
+      
         topics {
           id
           name
