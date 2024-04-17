@@ -1,7 +1,7 @@
 {
-  "name": "white/projekt-granting",
+  "name": "@white/projekt_granting",
   "private": false,
-  "version": "0.4.5",
+  "version": "0.4.8",
   "type": "module",
   
   "main": "dist/umd/index.js",  
