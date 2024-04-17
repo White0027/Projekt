@@ -1,5 +1,5 @@
 {
-  "name": "@white-uois-projekt-granting",
+  "name": "@white/uois/projekt/granting",
   "private": false,
   "version": "0.4.8",
   "type": "module",
