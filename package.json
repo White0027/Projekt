@@ -1,7 +1,7 @@
 {
-  "name": "@white/uoisfrontedui-granting",
+  "name": "@White0027/Projekt-granting",
   "private": false,
-  "version": "0.4.9",
+  "version": "0.4.10",
   "type": "module",
   
   "main": "dist/umd/index.js",  
