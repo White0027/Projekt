@@ -2,24 +2,50 @@ import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
 const query = `query ($id: UUID!) {
     result: groupById(id: $id) {
-      created
-      email
-      events {
-        description
-        enddate
+        __typename
         id
-        place
-      }
-      id
-      memberships {
-        user {
-          email
+        events {
+          id
+        }
+        name
+        nameEn
+        changedby {
+          id
+          name
+        }
+        created
+        lastchange
+        createdby {
+          id
           fullname
+        }
+        email
+        valid
+        grouptype {
+          id
+          name
+        }
+        subgroups {
+          id
+          name
+        }
+        mastergroup {
+          id
+          name
+        }
+        memberships {
+          id
+          valid
+          enddate
+        }
+        roles {
+          id
+          valid
+        }
+        rbacobject {
           id
         }
       }
-      valid
-    }
   }`
 
 export const FetchGroupClassificationByIdAsyncAction = CreateAsyncActionFromQuery(query)

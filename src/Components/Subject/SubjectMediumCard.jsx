@@ -10,6 +10,14 @@ export const SubjectMediumCard = ({subject}) => {
                 <Col>Název</Col>
                 <Col>{subject?.name}</Col>
             </Row>
-        </CardCapsule>
+            <Row>
+                <Col>Poslední změna</Col>
+                <Col>{subject?.lastchange}</Col>
+            </Row>
+            <Row>
+                <Col>Vytvořeno</Col>
+                <Col>{subject?.created}</Col>
+            </Row>
+        </CardCapsule> 
     )
 }

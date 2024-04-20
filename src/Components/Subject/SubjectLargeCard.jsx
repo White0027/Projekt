@@ -7,13 +7,13 @@ export const SubjectLargeCard = ({subject, children}) => {
     return (
         <CardCapsule title={"Subjekt " + subject?.name}>
         <Row>
-            <Col md={3}>
+            <Col md={4}>
                 <SubjectMediumCard subject={subject}/>
             </Col>
-            <Col md={6}>
+            <Col md={4}>
                 {children}
             </Col>
-            <Col md={3}>
+            <Col md={4}>
                 <SubjectMediumCard subject={subject}/>
             </Col>
             

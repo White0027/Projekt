@@ -5,10 +5,26 @@ const query = `query ($id: UUID!) {
         __typename
         id
         name
+        created
         lastchange
+        nameEn
+        changedby {
+          email
+          fullname
+        }
+        createdby {
+          email
+          fullname
+        }
+        program {
+          id
+          name
+        }
         semesters {
           id
-          order
+          subject {
+            name
+          }
         }
       }
   }`
