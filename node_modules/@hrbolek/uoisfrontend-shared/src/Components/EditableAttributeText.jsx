@@ -17,7 +17,7 @@ const validator = CreateAsyncQueryValidator({error: "Něco se nepovedlo", succes
  * @param {function} props.asyncUpdater async function which represents an async action for dispatch
  * @returns JSX.Element
  */
-export const EditableAttributeText = ({item, attributeName, asyncUpdater, label}) => {
+export const EditableAttributeText = ({item, attributeName, asyncUpdater, label, type="text"}) => {
     const dispatch = useDispatch()
     const attributeValue = item[attributeName]
     const [onResolve, onReject] = validator(dispatch)
@@ -33,7 +33,7 @@ export const EditableAttributeText = ({item, attributeName, asyncUpdater, label}
         // <TextInput id={item.id} value={attributeValue} onChange={onChange_} />
 
         <div className="form-floating">
-            <TextInput id={item.id} value={attributeValue} onChange={onChange_} />
+            <TextInput type={type} id={item.id} value={attributeValue} onChange={onChange_} />
             <label htmlFor={item.id}>{label}</label>
         </div>
 

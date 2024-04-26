@@ -1,7 +1,5 @@
 import { useDispatch } from "react-redux"
-import { useFreshItem } from "../Hooks"
 import { CreateAsyncActionFromQuery } from "../Queries"
-import { UpdateItem } from "../Store"
 import { useEffect, useState } from "react"
 
 const MeQuery = `{
@@ -12,12 +10,22 @@ const MeQuery = `{
       surname
       fullname
       email
+      roles {
+        group {
+          id
+          name
+        }
+        roletype {
+          id
+          name
+        }
+      }
     }
   }`
 
 const MeAsyncAction = CreateAsyncActionFromQuery(MeQuery)
 
-export const LogButton = ({loginURL='/oauth/login', logoutURL='/oauth/logout'}) => {
+export const LogButton = ({loginURL='/oauth/login2?redirect_uri=/', logoutURL='/oauth/logout'}) => {
     const dispatch = useDispatch()
     const [me, setMe] = useState(null)
     useEffect(() => {

@@ -20,7 +20,7 @@ import { TextInput } from './TextInput';
  * @param {callback} props.onChange delayed callback notifying about the change
  * @returns JSX.Element
  */
-export const EditableText = ({id, value, onChange, placeholder}) => {
+export const EditableText = ({id, value, onChange, placeholder, type="text"}) => {
     const [localValue, setLocalValue] = useState(value)
     const [editable, setEditable] = useState(false)
 
@@ -57,7 +57,7 @@ export const EditableText = ({id, value, onChange, placeholder}) => {
     return (
         editable ? 
             <InputGroup>
-                <TextInput id={id} value={value} placeholder={placeholder} onChange={onLocalChange} />
+                <TextInput type={type} id={id} value={value} placeholder={placeholder} onChange={onLocalChange} />
                 <Button size="sm" variant='outline-warning' onClick={crossClick}><X /></Button>
                 <Button size="sm" variant='outline-danger' onClick={checkClick}><Check /></Button>
             </InputGroup> : 
