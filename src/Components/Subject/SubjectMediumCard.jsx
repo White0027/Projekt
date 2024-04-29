@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col'
 
 export const SubjectMediumCard = ({subject}) => {
     return (
-        <CardCapsule title={"Akreditace - atributy " + subject?.name}>
+        <CardCapsule title={"Subjekty - atributy " + subject?.name}>
             <Row>
                 <Col>Název</Col>
                 <Col>{subject?.name}</Col>
