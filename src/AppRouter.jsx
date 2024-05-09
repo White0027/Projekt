@@ -8,6 +8,9 @@ import { EventPage } from "./Pages/EventPage";
 import { EventEditPage } from "./Pages/EventEditPage";
 import { AccreditationPage } from "./Pages/AccreditationPage";
 import { SubjectPage } from "./Pages/SubjectPage";
+import { SubjectEditPage } from "./Pages/SubjectEditPage";
+import { AccreditationEditPage } from "./Pages/AccreditationEditPage";
+import { SemesterEditPage } from "./Pages/SemesterEditPage";
 // import { UserPage, GroupPage } from "./Pages";
 
 export const Routes = [
@@ -49,11 +52,6 @@ export const Routes = [
     {
         path: "/subject/edit/:id",
         element: <SubjectEditPage />,
-        errorElement: <SearchPage />,
-    },
-    {
-        path: "/subjects/edit/:id",
-        element: <SubjectsEditPage />,
         errorElement: <SearchPage />,
     },
     {
