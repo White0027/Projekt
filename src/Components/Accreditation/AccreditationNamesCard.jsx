@@ -3,7 +3,7 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
-export const AccreditationMediumCard = ({accreditation}) => {
+export const AccreditationNamesCard = ({accreditation}) => {
     return (
         <CardCapsule title={"Akreditace - atributy " + accreditation?.name}>
             <Row>
