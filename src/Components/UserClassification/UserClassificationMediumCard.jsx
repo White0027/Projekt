@@ -5,10 +5,10 @@ import Col from 'react-bootstrap/Col'
 
 export const UserClassificationMediumCard = ({userclassification}) => {
     return (
-        <CardCapsule title={"Uživatelská klasifikace - atributy " + userclassification?.name}>
+        <CardCapsule title={"Uživatelská klasifikace - atributy " + userclassification?.order}>
             <Row>
                 <Col>Název</Col>
-                <Col>{userclassification?.name}</Col>
+                <Col>{userclassification?.order}</Col>
             </Row>
         </CardCapsule>
     )

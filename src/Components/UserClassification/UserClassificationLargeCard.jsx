@@ -5,7 +5,7 @@ import { UserClassificationMediumCard } from './UserClassificationMediumCard'
 
 export const UserClassificationLargeCard = ({userclassification, children}) => {
     return (
-        <CardCapsule title={"Uživatelská klasifikace " + userclassification?.name}>
+        <CardCapsule title={"Uživatelská klasifikace " + userclassification?.order}>
         <Row>
             <Col md={3}>
                 <UserClassificationMediumCard userclassification={userclassification}/>
