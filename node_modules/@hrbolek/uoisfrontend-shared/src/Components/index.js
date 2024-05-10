@@ -8,3 +8,5 @@ export * from './EditableAttributeSelect'
 export * from './TextInput'
 export * from './Filters'
 export * from './Me'
+
+export * from './ProxyLink'

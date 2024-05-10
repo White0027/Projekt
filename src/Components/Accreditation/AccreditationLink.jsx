@@ -17,8 +17,8 @@ export const AccreditationLink = ({accreditation, children, menu=true}) => {
                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                    <Dropdown.Item as={"div"}><ProxyLink to={"/granting/accreditation/view/" + accreditation?.id} >Zobrazit</ProxyLink></Dropdown.Item>
-                    <Dropdown.Item as={"div"}><ProxyLink to={"/granting/accreditation/edit/" + accreditation?.id} >Editovat</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/accreditation/view/" + accreditation?.id} >Zobrazit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/accreditation/edit/" + accreditation?.id} >Editovat</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>         
             )
@@ -37,7 +37,7 @@ export const AccreditationCreateLink = ({menu=true}) => {
                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                    <Dropdown.Item as={"div"} ><ProxyLink to={"/granting/accreditation/create"} >Vytvořit</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"} ><ProxyLink to={"/accreditation/create"} >Vytvořit</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         )
