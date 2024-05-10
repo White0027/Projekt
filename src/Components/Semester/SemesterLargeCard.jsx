@@ -5,7 +5,7 @@ import { SemesterMediumCard } from './SemesterMediumCard'
 
 export const SemesterLargeCard = ({semester, children}) => {
     return (
-        <CardCapsule title={"Semestr " + semester?.name}>
+        <CardCapsule title={"Semestr " + semester?.order}>
         <Row>
             <Col md={3}>
                 <SemesterMediumCard semester={semester}/>

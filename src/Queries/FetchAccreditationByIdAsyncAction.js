@@ -17,7 +17,21 @@ const query = `query($id: UUID!){
       name
       nameEn
     }
+    grantsGroup {
+      id
+      name
+    }
+    licencedGroup {
+      id
+      name
+    }
+    students {
+      id
+      student {
+        id
+        fullname
+      }
+    }
   }
 }`
-
 export const FetchAccreditationByIdAsyncAction = CreateAsyncActionFromQuery(query)

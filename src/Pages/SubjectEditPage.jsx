@@ -18,8 +18,8 @@ export const SubjectEditPage = ()  => {
             //    Události nahrány
             //    {JSON.stringify(Subject)}
             //</div>
-            <SubjectLargeCard Subject={Subject}>
-                <SubjectEditCard Subject={Subject} />
+            <SubjectLargeCard subject={Subject}>
+                <SubjectEditCard subject={Subject} />
             </SubjectLargeCard>
         )
     } else {

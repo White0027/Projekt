@@ -5,10 +5,10 @@ import Col from 'react-bootstrap/Col'
 
 export const SemesterMediumCard = ({semester}) => {
     return (
-        <CardCapsule title={"Semestr - atributy " + semester?.name}>
+        <CardCapsule title={"Semestr - atributy " + semester?.order}>
             <Row>
                 <Col>Název</Col>
-                <Col>{semester?.name}</Col>
+                <Col>{semester?.order}</Col>
             </Row>
         </CardCapsule>
     )

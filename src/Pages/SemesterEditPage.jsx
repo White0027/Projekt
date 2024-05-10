@@ -18,8 +18,8 @@ export const SemesterEditPage = ()  => {
             //    Události nahrány
             //    {JSON.stringify(Semester)}
             //</div>
-            <SemesterLargeCard Semester={Semester}>
-                <SemesterEditCard Semester={Semester} />
+            <SemesterLargeCard semester={Semester}>
+                <SemesterEditCard semester={Semester} />
             </SemesterLargeCard>
         )
     } else {

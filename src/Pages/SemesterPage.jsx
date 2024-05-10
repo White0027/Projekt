@@ -13,7 +13,7 @@ export const SemesterPage = ()  => {
 
     if (semester) {
         return (
-            <SemesterLargeCard accreditation={semester} />
+            <SemesterLargeCard semester={semester} />
         )
     } else {
         return (

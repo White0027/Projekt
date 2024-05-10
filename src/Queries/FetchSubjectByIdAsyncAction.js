@@ -26,6 +26,10 @@ const query = `query ($id: UUID!) {
             name
           }
         }
+        grants {
+          id
+          name
+        }
       }
   }`
 
