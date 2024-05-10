@@ -2,7 +2,7 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { AccreditationMediumCard } from './AccreditationMediumCard'
-import { AccreditationNamesCard } from './AccreditationNamesCard'
+import { AccreditationStudentsCard } from './AccreditationStudentsCard'
 import { AccreditationLink } from './AccreditationLink'
 
 export const AccreditationLargeCard = ({accreditation, children}) => {
@@ -16,7 +16,7 @@ export const AccreditationLargeCard = ({accreditation, children}) => {
                 <AccreditationMediumCard accreditation={accreditation}/>
             </Col>
             <Col md={6}>
-                <AccreditationNamesCard accreditation={accreditation}/>
+                <AccreditationStudentsCard accreditation={accreditation}/>
             </Col>
             
         </Row>
