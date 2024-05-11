@@ -12,10 +12,13 @@ export const AccreditationLargeCard = ({accreditation, children}) => {
             <AccreditationLink accreditation={accreditation} menu={true}></AccreditationLink>
         </div>}>
         <Row>
-            <Col md={6}>
+            <Col md={4}>
                 <AccreditationMediumCard accreditation={accreditation}/>
             </Col>
-            <Col md={6}>
+            <Col md={4}>
+                {children}
+            </Col>
+            <Col md={34}>
                 <AccreditationStudentsCard accreditation={accreditation}/>
             </Col>
             
