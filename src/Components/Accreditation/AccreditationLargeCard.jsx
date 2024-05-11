@@ -18,7 +18,7 @@ export const AccreditationLargeCard = ({accreditation, children}) => {
             <Col md={4}>
                 {children}
             </Col>
-            <Col md={34}>
+            <Col md={4}>
                 <AccreditationStudentsCard accreditation={accreditation}/>
             </Col>
             
