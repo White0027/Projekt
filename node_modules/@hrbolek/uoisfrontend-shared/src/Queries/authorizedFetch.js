@@ -30,7 +30,18 @@ export const authorizedFetch2 = (path, params) => {
         newParams.body = newParams.body.replaceAll(": ID", ": UUID")
     }
 
-    return fetch(overridenPath, newParams).then(response => response.json()) //params.header should be extended with Authorization TOKEN
+    return fetch(overridenPath, newParams).then(response => {
+        if (response.status === 302) {
+            if (window) {
+                const host = window.location.host
+                const protocol = window.location.protocol
+                const location = response.headers.location
+                const redirectLocation = `${protocol}://${host}${location}`
+                window.location.assign(redirectLocation)
+            }
+        }
+        return response.json()
+    }) //params.header should be extended with Authorization TOKEN
     // const cached = cache[bodyIndex]
     // if (cached) {
     //     console.log("fetch2.cache used")

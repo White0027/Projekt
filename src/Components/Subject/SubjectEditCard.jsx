@@ -6,7 +6,7 @@ import { UpdateSubjectAsyncAction } from '../../Queries/UpdateSubjectAsyncAction
 
 export const SubjectEditCard = ({subject}) => {
     return (
-        <CardCapsule title={"Akreditace - atributy " + subject?.name}>
+        <CardCapsule title={"Subjekt - atributy " + subject?.name}>
             <Row>
                 <Col>Název</Col>
                 <Col>{subject?.name}</Col>

@@ -1,5 +1,5 @@
 import { Dropdown } from "react-bootstrap";
-import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src/Components/ProxyLink.jsx';
+import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src';
 
 export const AccreditationLink_ = ({accreditation, children}) => {
     return (

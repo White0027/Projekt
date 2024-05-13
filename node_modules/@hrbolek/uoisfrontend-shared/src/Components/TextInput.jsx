@@ -16,12 +16,9 @@ import { CreateDelayer } from './CreateDelayer'
  * @param {function} props.onChange delayed callback notifying about the change
  * @returns JSX.Element
  */
-export const TextInput = ({id, value, onChange, placeholder, type="text"}) => {
+export const TextInput = ({onChange, type="text", value, ...props}) => {
     const [localValue, setLocalValue] = useState(value)
-
-    const delayer = useMemo(
-        () => CreateDelayer(), [id]
-    )
+    const [delayer] = useState(() => CreateDelayer())
 
     const localOnChange = //useCallback(
         (e) => {
@@ -45,6 +42,6 @@ export const TextInput = ({id, value, onChange, placeholder, type="text"}) => {
         //, [id, onChange])
 
     return (
-        <input type={type} id={id} className="form-control" placeholder={placeholder} value={localValue} onChange={localOnChange} onBlur={onBlur}/>
+        <input className="form-control" {...props} type={type} value={localValue} onChange={localOnChange} onBlur={onBlur}/>
     )
 }

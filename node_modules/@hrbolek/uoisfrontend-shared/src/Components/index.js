@@ -10,3 +10,5 @@ export * from './Filters'
 export * from './Me'
 
 export * from './ProxyLink'
+export * from './SearchInput'
+export * from './SelectInput'
