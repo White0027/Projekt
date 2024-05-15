@@ -5,10 +5,14 @@ import Col from 'react-bootstrap/Col'
 
 export const SubjectMediumCard = ({subject}) => {
     return (
-        <CardCapsule title={"Subjekty - atributy " + subject?.name}>
+        <CardCapsule title={"Předměty - atributy "}>
             <Row>
                 <Col>Název</Col>
                 <Col>{subject?.name}</Col>
+            </Row>
+            <Row>
+                <Col>Name</Col>
+                <Col>{subject?.nameEn}</Col>
             </Row>
             <Row>
                 <Col>Poslední změna</Col>
@@ -17,6 +21,14 @@ export const SubjectMediumCard = ({subject}) => {
             <Row>
                 <Col>Vytvořeno</Col>
                 <Col>{subject?.created}</Col>
+            </Row>
+            <Row>
+                <Col>Vytvořil</Col>
+                <Col>{subject?.createdby}</Col>
+            </Row>
+            <Row>
+                <Col>Téma hodiny</Col>
+                <Col>{subject?.program?.name}</Col>
             </Row>
         </CardCapsule> 
     )

@@ -5,13 +5,13 @@ import Col from 'react-bootstrap/Col'
 
 export const AccreditationMediumCard = ({accreditation}) => {
     return (
-        <CardCapsule title={"Akreditace - atributy " + accreditation?.name}>
+        <CardCapsule title={"Akreditace - atributy "}>
             <Row>
                 <Col>Název</Col>
                 <Col>{accreditation?.name}</Col>
             </Row>
             <Row>
-                <Col>Subjekt</Col>
+                <Col>Předmět</Col>
                 <Col>{accreditation?.subjects?.name}</Col>
             </Row>
             <Row>

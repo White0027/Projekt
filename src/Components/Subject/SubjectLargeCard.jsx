@@ -5,7 +5,7 @@ import { SubjectMediumCard } from './SubjectMediumCard'
 
 export const SubjectLargeCard = ({subject, children}) => {
     return (
-        <CardCapsule title={"Subjekt " + subject?.name}>
+        <CardCapsule title={"Předmět " + subject?.name}>
         <Row>
             <Col md={4}>
                 <SubjectMediumCard subject={subject}/>

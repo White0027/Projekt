@@ -12,6 +12,12 @@ mutation ($id: UUID!, $lastchange: DateTime!, $order: Int!)
       lastchange
       name
       order
+      subject {
+        name
+      }
+      classificationType {
+        name
+      }
     }
   }
 }

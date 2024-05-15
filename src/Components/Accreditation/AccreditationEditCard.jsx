@@ -13,7 +13,28 @@ export const AccreditationEditCard = ({accreditation}) => {
             </Row>
             <Row>
                 <EditableAttributeText item={accreditation} attributeName="name" label="Název" asyncUpdater={UpdateAccreditationAsyncAction} />
-            </Row>    
+            </Row>
+            <Row>
+                <Col>Předmět</Col>
+                <Col>{accreditation?.subjects?.name}</Col>
+            </Row>
+            <Row>
+                <EditableAttributeText item={accreditation} attributeName="subjects?.name" label="Předmět" asyncUpdater={UpdateAccreditationAsyncAction} />
+            </Row>
+            <Row>
+                <Col>Typ Česky</Col>
+                <Col>{accreditation?.type?.name}</Col>
+            </Row>
+            <Row>
+                <EditableAttributeText item={accreditation} attributeName="type?.name" label="Typ Česky" asyncUpdater={UpdateAccreditationAsyncAction} />
+            </Row>
+            <Row>
+                <Col>Typ English</Col>
+                <Col>{accreditation?.type?.nameEn}</Col>
+            </Row>
+            <Row>
+                <EditableAttributeText item={accreditation} attributeName="type?.nameEn" label="Typ English" asyncUpdater={UpdateAccreditationAsyncAction} />
+            </Row>
         </CardCapsule>
     )
 }
