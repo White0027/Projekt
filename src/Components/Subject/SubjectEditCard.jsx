@@ -26,7 +26,7 @@ export const SubjectEditCard = ({subject}) => {
                 <Col>{subject?.program?.name}</Col>
             </Row>
             <Row>
-                <EditableAttributeText item={subject} attributeName="program?.name" label="Téma hodiny" asyncUpdater={UpdateSubjectAsyncAction} />
+                <EditableAttributeText item={subject?.program} attributeName="name" label="Téma hodiny" asyncUpdater={UpdateSubjectAsyncAction} />
             </Row>
         </CardCapsule>
     )

@@ -19,21 +19,21 @@ export const AccreditationEditCard = ({accreditation}) => {
                 <Col>{accreditation?.subjects?.name}</Col>
             </Row>
             <Row>
-                <EditableAttributeText item={accreditation} attributeName="subjects?.name" label="Předmět" asyncUpdater={UpdateAccreditationAsyncAction} />
+                <EditableAttributeText item={accreditation?.subjects} attributeName="name" label="Předmět" asyncUpdater={UpdateAccreditationAsyncAction} />
             </Row>
             <Row>
                 <Col>Typ Česky</Col>
                 <Col>{accreditation?.type?.name}</Col>
             </Row>
             <Row>
-                <EditableAttributeText item={accreditation} attributeName="type?.name" label="Typ Česky" asyncUpdater={UpdateAccreditationAsyncAction} />
+                <EditableAttributeText item={accreditation?.type} attributeName="name" label="Typ Česky" asyncUpdater={UpdateAccreditationAsyncAction} />
             </Row>
             <Row>
                 <Col>Typ English</Col>
                 <Col>{accreditation?.type?.nameEn}</Col>
             </Row>
             <Row>
-                <EditableAttributeText item={accreditation} attributeName="type?.nameEn" label="Typ English" asyncUpdater={UpdateAccreditationAsyncAction} />
+                <EditableAttributeText item={accreditation?.type} attributeName="nameEn" label="Typ English" asyncUpdater={UpdateAccreditationAsyncAction} />
             </Row>
         </CardCapsule>
     )
