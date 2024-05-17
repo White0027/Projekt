@@ -33,7 +33,7 @@ export const AccreditationEditCard = ({accreditation}) => {
                 <Col>{accreditation?.type?.nameEn}</Col>
             </Row>
             <Row>
-                <EditableAttributeText item={accreditation?.type} attributeName="nameEn" label="Typ English" asyncUpdater={UpdateAccreditationAsyncAction} />
+                <EditableAttributeText item={accreditation?.type} attributeName="name" label="Typ English" asyncUpdater={UpdateAccreditationAsyncAction} />
             </Row>
         </CardCapsule>
     )
