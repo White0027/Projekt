@@ -4,7 +4,7 @@ import { useFreshItem, CreateAsyncQueryValidator, useDispatch } from "@hrbolek/u
 import { SemesterLargeCard } from "../Components/Semester/SemesterLargeCard"
 import { FetchSemesterByIdAsyncAction } from "../Queries/FetchSemesterByIdAsyncAction"
 
-const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst ¨semestr", success: "Načtení semestru se povedlo"})
+const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst semestr", success: "Načtení semestru se povedlo"})
 export const SemesterPage = ()  => {
     const {id} = useParams()
     const [onResolve, onReject] = validator(useDispatch())
