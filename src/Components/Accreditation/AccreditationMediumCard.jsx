@@ -5,29 +5,29 @@ import Col from 'react-bootstrap/Col'
 
 export const AccreditationMediumCard = ({accreditation}) => {
     return (
-        <CardCapsule title={"Akreditace - atributy "}>
+        <CardCapsule title={"Program - atributy "}>
             <Row>
                 <Col>Název</Col>
                 <Col>{accreditation?.name}</Col>
             </Row>
             <Row>
-                <Col>Předmět</Col>
-                <Col>{accreditation?.subjects?.name}</Col>
+                <Col>Name</Col>
+                <Col>{accreditation?.nameEn}</Col>
             </Row>
             <Row>
-                <Col>Typ Česky</Col>
+                <Col>Typ studia</Col>
                 <Col>{accreditation?.type?.name}</Col>
             </Row>
             <Row>
-                <Col>Typ English</Col>
+                <Col>Type of study</Col>
                 <Col>{accreditation?.type?.nameEn}</Col>
             </Row>
             <Row>
-                <Col>Garantovaná Skupina</Col>
+                <Col>Garantová skupina</Col>
                 <Col>{accreditation?.grantsGroup?.name}</Col>
             </Row>
             <Row>
-                <Col>Licensovaná Skupina</Col>
+                <Col>Licencová skupina</Col>
                 <Col>{accreditation?.licencedGroup?.name}</Col>
             </Row>
         </CardCapsule>

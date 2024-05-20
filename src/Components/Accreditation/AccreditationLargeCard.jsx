@@ -8,7 +8,7 @@ import { AccreditationLink } from './AccreditationLink'
 export const AccreditationLargeCard = ({accreditation, children}) => {
     return (
         <CardCapsule title={<div>
-            <span>Akreditace: </span>
+            <span>Program: </span>
             <AccreditationLink accreditation={accreditation} menu={true}></AccreditationLink>
         </div>}>
         <Row>
