@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { SemesterMediumCard } from './SemesterMediumCard'
 import { SemesterLink } from './SemesterLink'
+import { SemesterLinkCard } from './SemesterLinkCard'
 
 export const SemesterLargeCard = ({semester, children}) => {
     return (
@@ -18,7 +19,7 @@ export const SemesterLargeCard = ({semester, children}) => {
                 {children}
             </Col>
             <Col md={3}>
-                <SemesterMediumCard semester={semester}/>
+                <SemesterLinkCard semester={semester}/>
             </Col>
             
         </Row>
