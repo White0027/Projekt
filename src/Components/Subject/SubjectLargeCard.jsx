@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { SubjectMediumCard } from './SubjectMediumCard'
 import { SubjectLink } from './SubjectLink'
+import { SubjectLinkCard } from './SubjectLinkCard'
 
 export const SubjectLargeCard = ({subject, children}) => {
     return (
@@ -18,7 +19,7 @@ export const SubjectLargeCard = ({subject, children}) => {
                 {children}
             </Col>
             <Col md={4}>
-                <SubjectMediumCard subject={subject}/>
+                <SubjectLinkCard subject={subject}/>
             </Col>
             
         </Row>
