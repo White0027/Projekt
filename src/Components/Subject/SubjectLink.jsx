@@ -3,7 +3,7 @@ import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src';
 
 export const SubjectLink_ = ({subject, children}) => {
     return (
-        <ProxyLink to={"/granting/subject/view/" + subject?.id}>{children?children:subject?.name}</ProxyLink>
+        <ProxyLink to={"/subject/view/" + subject?.id}>{children?children:subject?.name}</ProxyLink>
     )
 }
 

@@ -11,6 +11,7 @@ import { SubjectPage } from "./Pages/SubjectPage";
 import { SubjectEditPage } from "./Pages/SubjectEditPage";
 import { AccreditationEditPage } from "./Pages/AccreditationEditPage";
 import { SemesterEditPage } from "./Pages/SemesterEditPage";
+import { SubjectsPage } from "./Pages/SubjectsPage";
 // import { UserPage, GroupPage } from "./Pages";
 
 export const Routes = [
@@ -42,6 +43,11 @@ export const Routes = [
     {
         path: "/accreditation/edit/:id",
         element: <AccreditationEditPage />,
+        errorElement: <SearchPage />,
+    },
+    {
+        path: "/subjects/view/:id",
+        element: <SubjectsPage />,
         errorElement: <SearchPage />,
     },
     {

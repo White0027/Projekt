@@ -13,7 +13,7 @@ export const AccreditationPage = ()  => {
 
     if (accreditation) {
         return (
-            <AccreditationLargeCard accreditation={accreditation} />
+            <AccreditationLargeCard accreditation={accreditation}/>
         )
     } else {
         return (
