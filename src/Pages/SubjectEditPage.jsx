@@ -13,11 +13,6 @@ export const SubjectEditPage = ()  => {
 
     if (Subject) {
         return (
-            //<UserLargeCard user={user} />
-            //<div>
-            //    Události nahrány
-            //    {JSON.stringify(Subject)}
-            //</div>
             <SubjectLargeCard subject={Subject}>
                 <SubjectEditCard subject={Subject} />
             </SubjectLargeCard>

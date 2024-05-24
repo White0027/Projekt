@@ -14,20 +14,6 @@ export const SemesterEditCard = ({semester}) => {
             <Row>
                 <EditableAttributeText item={semester} attributeName="order" label="Název" asyncUpdater={UpdateSemesterAsyncAction} />
             </Row>
-            <Row>
-                <Col>Název předmětu</Col>
-                <Col>{semester?.subject?.name}</Col>
-            </Row>
-            <Row>
-                <EditableAttributeText item={semester?.subject} attributeName="name" label="Název předmětu" asyncUpdater={UpdateSemesterAsyncAction} />
-            </Row>
-            <Row>
-                <Col>Druh klasifikace</Col>
-                <Col>{semester?.classificationType?.name}</Col>
-            </Row>
-            <Row>
-                <EditableAttributeText item={semester?.classificationType} attributeName="name" label="Druh klasifikace" asyncUpdater={UpdateSemesterAsyncAction} />
-            </Row>
         </CardCapsule>
     )
 }
