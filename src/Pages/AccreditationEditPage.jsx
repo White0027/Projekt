@@ -13,11 +13,6 @@ export const AccreditationEditPage = ()  => {
 
     if (accreditation) {
         return (
-            //<UserLargeCard user={user} />
-            //<div>
-            //    Události nahrány
-            //    {JSON.stringify(accreditation)}
-            //</div>
             <AccreditationLargeCard accreditation={accreditation}>
                 <AccreditationEditCard accreditation={accreditation} />
             </AccreditationLargeCard>
