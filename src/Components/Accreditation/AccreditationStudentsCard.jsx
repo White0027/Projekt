@@ -12,9 +12,9 @@ const UserShort = ({user}) => {
     )
 }
 
-export const AccreditationStudentsCard = ({student, title="Studenti", valid=true}) => {
-    const name = student?.name || []
-    const filtered = (valid===null)?name:name.filter(m => m?.valid === valid)
+export const AccreditationStudentsCard = ({accreditation, title="Studenti", valid=true}) => {
+    const fullname = accreditation?.students?.student?.fullname || []
+    const filtered = (valid===null)?fullname:fullname.filter(m => m?.valid === valid)
     const mapped = filtered.map(m => m?.user)
     return (
         <CardCapsule title={title}>

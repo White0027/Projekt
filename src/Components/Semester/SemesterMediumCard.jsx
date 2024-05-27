@@ -1,10 +1,11 @@
-/* eslint-disable react/prop-types */
-import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
+import React from 'react';
+import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src';
+import { SubjectEditCard } from '../Subject/SubjectEditCard';
 
-export const SemesterMediumCard = ({semester, subjects}) => {
+export const SemesterMediumCard = ({ semester }) => {
     return (
         <CardCapsule title={"Semestr - atributy "}>
             <Row>
@@ -16,7 +17,16 @@ export const SemesterMediumCard = ({semester, subjects}) => {
                 </Col>
             </Row>
             <Row>
-                <Col>Název</Col>
+                <Col>Předmět</Col>
+                <Col>
+                    <ProxyLink to={`/subject/view/${semester?.subject?.id}`}>
+                        {`${semester?.subject?.name}`}
+                    </ProxyLink>
+                </Col>
+
+            </Row>
+            <Row>
+                <Col>Pořadí</Col>
                 <Col>{semester?.order}</Col>
             </Row>
             <Row>
@@ -30,7 +40,7 @@ export const SemesterMediumCard = ({semester, subjects}) => {
             <Row>
                 <Col>Druh klasifikace</Col>
                 <Col>{semester?.classificationType?.name}</Col>
-                </Row>
+            </Row>
         </CardCapsule>
     );
 };
