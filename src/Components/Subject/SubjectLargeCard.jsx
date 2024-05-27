@@ -5,7 +5,6 @@ import { SubjectMediumCard } from './SubjectMediumCard'
 import { SubjectLink } from './SubjectLink'
 import { SubjectLinkCard } from './SubjectLinkCard'
 import { SubjectRawCard } from './SubjectRawCard'
-import { SubjectBackCard } from './SubjectBackCard'
 
 export const SubjectLargeCard = ({subject, children, accreditation}) => {
     return (
@@ -16,7 +15,6 @@ export const SubjectLargeCard = ({subject, children, accreditation}) => {
         <Row>
             <Col md={4}>
                 <SubjectMediumCard subject={subject}/>
-                <SubjectBackCard accreditation={accreditation} />
             </Col>
             <Col md={4}>
                 <SubjectLinkCard subject={subject}/>

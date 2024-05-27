@@ -5,24 +5,18 @@ import { Dropdown } from "react-bootstrap";
 
 //Topics: Dropdown, ProxyLink
 
-export const SemesterLinkCard = ({semester, children}) => {
+export const SemesterLinkCard = ({ semester, children }) => {
     return (
         <CardCapsule title={"Téma Semestru"}>
-        <div>
-            <Row>
-        <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
-        <span>Téma </span>
-                <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    <center>
-                        Úvod
-                    </center>
-                </Dropdown.Menu>
-            </Dropdown> 
-            </Row>
-
-        </div>
-        </CardCapsule> 
-    )
-}
+            <div>
+                {semester?.topics.map((topic, index) => (
+                    <Row key={index}>
+                        <Col>
+                            {`${index + 1}. ${topic.name}`}
+                        </Col>
+                    </Row>
+                ))}
+            </div>
+        </CardCapsule>
+    );
+};

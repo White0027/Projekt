@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col'
 import { SemesterMediumCard } from './SemesterMediumCard'
 import { SemesterLink } from './SemesterLink'
 import { SemesterLinkCard } from './SemesterLinkCard'
+import { SemesterRawCard } from './SemesterRawCard'
 
 export const SemesterLargeCard = ({semester, children}) => {
     return (
@@ -22,11 +23,11 @@ export const SemesterLargeCard = ({semester, children}) => {
                 {children}
             </Col>
             
-        </Row>
+            </Row>
         <br />
         <Row>
             <Col>
-                {JSON.stringify(semester)}
+                <SemesterRawCard semester={semester}/>
             </Col>
         </Row>
     </CardCapsule>

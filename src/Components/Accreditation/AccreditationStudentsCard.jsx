@@ -12,8 +12,8 @@ const UserShort = ({user}) => {
     )
 }
 
-export const AccreditationStudentsCard = ({subjects, title="Studenti", valid=true}) => {
-    const name = subjects?.name || []
+export const AccreditationStudentsCard = ({student, title="Studenti", valid=true}) => {
+    const name = student?.name || []
     const filtered = (valid===null)?name:name.filter(m => m?.valid === valid)
     const mapped = filtered.map(m => m?.user)
     return (
