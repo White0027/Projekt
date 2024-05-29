@@ -3,7 +3,7 @@ import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src';
 
 export const SemesterLink_ = ({semester, children}) => {
     return (
-        <ProxyLink to={"/semester/view/" + semester?.id}>{children?children:semester?.name}</ProxyLink>
+        <ProxyLink to={"/semester/view/" + semester?.id}>{children?children:semester?.order}</ProxyLink>
     )
 }
 
