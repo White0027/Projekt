@@ -29,21 +29,21 @@ export const AccreditationLink = ({accreditation, children, menu=true}) => {
     }
 }
 
-// export const AccreditationCreateLink = ({menu=true}) => {
-//     if (menu) {
-//         return (
-//             <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
-//                 Akreditace:
-//                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
-//                 </Dropdown.Toggle>
-//                 <Dropdown.Menu>
-//                     <Dropdown.Item as={"div"} ><ProxyLink to={"/accreditation/create"} >Vytvořit</ProxyLink></Dropdown.Item>
-//                 </Dropdown.Menu>
-//             </Dropdown>
-//         )
-//     } else {
-//         return (
-//             <div>Error</div>
-//         )
-//     }
-// }
+export const AccreditationCreateLink = ({menu=true}) => {
+    if (menu) {
+        return (
+            <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
+                Akreditace:
+                <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                    <Dropdown.Item as={"div"} ><ProxyLink to={"/accreditation/create"} >Vytvořit</ProxyLink></Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
+        )
+    } else {
+        return (
+            <div>Error</div>
+        )
+    }
+}

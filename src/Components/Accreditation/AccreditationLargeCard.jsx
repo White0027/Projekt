@@ -16,10 +16,10 @@ export const AccreditationLargeCard = ({accreditation, children}) => {
         <Row>
             <Col md={4}>
                 <AccreditationMediumCard accreditation={accreditation}/>
-                <AccreditationSubjectCard accreditation={accreditation}/>
             </Col>
             <Col md={4}>
                 {children}
+                <AccreditationSubjectCard accreditation={accreditation}/>
             </Col>
             <Col md={4}>
                 <AccreditationStudentsCard accreditation={accreditation}/>
