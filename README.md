@@ -25,3 +25,20 @@ Stáhli jsme si potřebné knihovny a začali studovat dokumentaci potřebných 
 Poslední týden pracujeme na vytvoření všech Pages (R), máme problém s ID u čehož si nevíme rady co přesně to je a jestli to má být unikátní ID.
 Tvoříme první základní strukturu našich Pages a pracujeme s daty k nim přiřazeným.
 ```
+
+> 25.4.2024
+
+```
+Úprava view pages, přidání tabulek a dat. 
+```
+
+> 10.5.2024
+
+```
+View pages hotové, začínáme tvořit Edit pages.
+```
+
+> 29.5.2024
+
+```
+Dodělávání view pages do finální verze, ůpravy tabulek.
