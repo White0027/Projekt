@@ -7,27 +7,27 @@ export const AccreditationMediumCard = ({accreditation}) => {
     return (
         <CardCapsule title={"Program - atributy "}>
             <Row>
-                <Col>Název</Col>
+                <Col>Název:</Col>
                 <Col>{accreditation?.name}</Col>
             </Row>
             <Row>
-                <Col>Name</Col>
+                <Col>Name:</Col>
                 <Col>{accreditation?.nameEn}</Col>
             </Row>
             <Row>
-                <Col>Typ studia</Col>
+                <Col>Typ studia:</Col>
                 <Col>{accreditation?.type?.name}</Col>
             </Row>
             <Row>
-                <Col>Type of study</Col>
+                <Col>Type of study:</Col>
                 <Col>{accreditation?.type?.nameEn}</Col>
             </Row>
             <Row>
-                <Col>Garantová skupina</Col>
+                <Col>Garantová skupina:</Col>
                 <Col>{accreditation?.grantsGroup?.name}</Col>
             </Row>
             <Row>
-                <Col>Licencová skupina</Col>
+                <Col>Licencová skupina:</Col>
                 <Col>{accreditation?.licencedGroup?.name}</Col>
             </Row>
         </CardCapsule>
