@@ -10,6 +10,9 @@
 > 10.4. až 17.4. - příprava na první projektový den
 -  dodělání nedostatků a příprava na prezentaci projektu na prvním projektovém dni
 
+> 10.5 až 17.5 - příprava na druhý projektový den
+- dodělání nedostatkiů a příprava na prezentaci projektu na druhý projektový den
+
 # Deník
 
 > 24.3.2024
