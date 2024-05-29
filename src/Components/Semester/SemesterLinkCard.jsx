@@ -1,22 +1,35 @@
-import Col from 'react-bootstrap/Col'
-import Row from 'react-bootstrap/Row'
-import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
-import { Dropdown } from "react-bootstrap";
+import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src';
+import { SortableTable } from '../Misc/SortableTable.jsx';
 
-//Topics: Dropdown, ProxyLink
+export const SemesterLinkCard = ({ semester }) => {
+    const columns = [
+        { key: 'index', label: 'Pořadí' },
+        { key: 'name', label: 'Téma' }
+    ];
 
-export const SemesterLinkCard = ({ semester, children }) => {
+    const renderRow = (row, columnKey) => {
+        switch (columnKey) {
+            case 'index':
+                return row.index + 1;
+            case 'name':
+                return row.name;
+            default:
+                return row[columnKey];
+        }
+    };
+
+    const data = semester?.topics.map((topic, index) => ({
+        ...topic,
+        index
+    })) || [];
+
     return (
         <CardCapsule title={"Téma Semestru"}>
-            <div>
-                {semester?.topics.map((topic, index) => (
-                    <Row key={index}>
-                        <Col>
-                            {`${index + 1}. ${topic.name}`}
-                        </Col>
-                    </Row>
-                ))}
-            </div>
+            <SortableTable
+                columns={columns}
+                data={data}
+                renderRow={renderRow}
+            />
         </CardCapsule>
     );
 };
