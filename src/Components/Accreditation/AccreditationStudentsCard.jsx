@@ -1,6 +1,6 @@
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src';
 import { SortableTable } from '../Misc/SortableTable.jsx';
-
+import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src';
 const UserShort = ({ fullname }) => {
     return (
         <>
@@ -9,18 +9,23 @@ const UserShort = ({ fullname }) => {
     );
 };
 
-export const AccreditationStudentsCard = ({ accreditation, title = "Studenti", valid = true }) => {
+export const AccreditationStudentsCard = ({ accreditation, title = "Studenti" }) => {
     const columns = [
         { key: 'fullname', label: 'Celé jméno' }
     ];
 
     const students = accreditation?.students || [];
     const data = students.map(student => ({
+        id: student?.student?.id,
         fullname: student?.student?.fullname
     }));
 
     const renderRow = (row, columnKey) => {
-        return <UserShort fullname={row.fullname} />;
+        return (
+            <ProxyLink to={`/user/${row.id}`}>
+                <UserShort fullname={row.fullname} />
+            </ProxyLink>
+        );
     };
 
     return (

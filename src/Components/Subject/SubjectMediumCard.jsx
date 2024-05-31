@@ -3,6 +3,7 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
+import Dropdown from 'react-bootstrap/Dropdown'
 
 export const SubjectMediumCard = ({subject}) => {
     return (
@@ -10,9 +11,20 @@ export const SubjectMediumCard = ({subject}) => {
             <Row>
                 <Col>Akreditace:</Col>
                 <Col>
-                    <ProxyLink to={`/accreditation/view/2766fc9a-b095-11ed-9bd8-0242ac110002`}>
+                <Dropdown className="d-inline mx-2" autoClose="outside" size="sm">
+                    <ProxyLink to={`/accreditation/view/${subject?.program?.id}`}>
                         {"IT Technologie"}
                     </ProxyLink>
+                    <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm" />
+                    <Dropdown.Menu>
+                        <Dropdown.Item as={"div"}>
+                            <ProxyLink to={`/accreditation/view/${subject?.program?.id}`}>Zobrazit</ProxyLink>
+                        </Dropdown.Item>
+                        <Dropdown.Item as={"div"}>
+                            <ProxyLink to={`/accreditation/edit/${subject?.program?.id}`}>Editovat</ProxyLink>
+                        </Dropdown.Item>
+                    </Dropdown.Menu>
+                </Dropdown>
                 </Col>
             </Row>
             <Row>
