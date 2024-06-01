@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col'
 import { AccreditationMediumCard } from './AccreditationMediumCard'
 import { AccreditationStudentsCard } from './AccreditationStudentsCard'
 import { AccreditationLink } from './AccreditationLink'
-import { AccreditationSubjectCard } from './AccreditationSubjectCard'
+import { AccreditationLinkCard } from './AccreditationLinkCard'
 import { AccreditationRawCard } from './AccreditationRawCard'
 
 export const AccreditationLargeCard = ({accreditation, children}) => {
@@ -19,7 +19,7 @@ export const AccreditationLargeCard = ({accreditation, children}) => {
             </Col>
             <Col md={4}>
                 {children}
-                <AccreditationSubjectCard accreditation={accreditation}/>
+                <AccreditationLinkCard accreditation={accreditation}/>
             </Col>
             <Col md={4}>
                 <AccreditationStudentsCard accreditation={accreditation}/>

@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import Dropdown from 'react-bootstrap/Dropdown';
 
 
-export const AccreditationSubjectCard = ({ accreditation }) => {
+export const AccreditationLinkCard = ({ accreditation }) => {
     const columns = [
         { key: 'name', label: 'Předměty' },
     ];
