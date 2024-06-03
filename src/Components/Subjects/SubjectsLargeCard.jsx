@@ -3,22 +3,18 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { SubjectsLink } from './SubjectsLink'
 import { SubjectsRawCard } from './SubjectsRawCard'
-import { SubjectsBackLink } from './SubjectsBackLink'
+import { SubjectsMediumCard } from './SubjectsMediumCard'
 
 export const SubjectsLargeCard = ({subjects, accreditation, children}) => {
     return (
         <CardCapsule title={<div>
-            <Row>
-                <Col md={11}>
-                    <SubjectsLink subjects={subjects}></SubjectsLink>
-                </Col>
-                <Col md={1}>
-                    <SubjectsBackLink accreditation={accreditation}></SubjectsBackLink>
-                </Col>
-            </Row>
+            <SubjectsLink subjects={subjects} menu={true}></SubjectsLink>
         </div>}>
         <Row>
-            <Col>
+            <Col md={4}>
+                <SubjectsMediumCard subjects={subjects}/>
+            </Col>
+            <Col md={8}>
                 {children}
             </Col>
         </Row>

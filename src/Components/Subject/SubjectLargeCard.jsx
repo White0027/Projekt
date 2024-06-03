@@ -22,7 +22,6 @@ export const SubjectLargeCard = ({subject, children, accreditation}) => {
             <Col md={4}>
                 {children}
             </Col>
-            
         </Row>
         <br />
         <Row>
