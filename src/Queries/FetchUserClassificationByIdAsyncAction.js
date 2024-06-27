@@ -1,32 +1,26 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
 const query = `query ($id: UUID!) {
-    result: acClassificationById(id: $id) {
+    result:userPage(id: $id) {
     __typename
     id
-    created
-    date
-    lastchange
-    order
-    level {
-      id
-      name
-    }
-    createdby {
-      id
-      name
-    }
-    changedby {
-      id
-      name
-    }
-    semester {
+    fullname
+    classifications {
       id
       order
-    }
-    student {
-      id
-      name
+      date
+      level {
+        id
+        name
+      }
+      semester {
+        id
+        order
+        subject {
+          id
+          name
+        }
+      }
     }
   }
 }`

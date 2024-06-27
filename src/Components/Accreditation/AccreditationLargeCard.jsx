@@ -6,12 +6,15 @@ import { AccreditationStudentsCard } from './AccreditationStudentsCard'
 import { AccreditationLink } from './AccreditationLink'
 import { AccreditationLinkCard } from './AccreditationLinkCard'
 import { AccreditationRawCard } from './AccreditationRawCard'
+import {SubjectsLink} from '../Subjects/SubjectsLink'
 
-export const AccreditationLargeCard = ({accreditation, children}) => {
+export const AccreditationLargeCard = ({accreditation, subjects, children}) => {
     return (
         <CardCapsule title={<div>
             <span>Program: </span>
             <AccreditationLink accreditation={accreditation} menu={true}></AccreditationLink>
+            <span> </span>
+            <SubjectsLink subjects={subjects} menu={true}></SubjectsLink>
         </div>}>
         <Row>
             <Col md={4}>

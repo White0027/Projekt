@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { CardCapsule, EditableAttributeText } from '@hrbolek/uoisfrontend-shared/src'
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";

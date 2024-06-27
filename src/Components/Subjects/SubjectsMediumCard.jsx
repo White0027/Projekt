@@ -7,7 +7,7 @@ import Dropdown from 'react-bootstrap/Dropdown'
 
 export const SubjectsMediumCard = ({subjects}) => {
     return (
-        <CardCapsule title={"Předměty - atributy "}>
+        <CardCapsule title={"Předmět - atributy "}>
             <Row>
                 <Col>Akreditace:</Col>
                 <Col>
