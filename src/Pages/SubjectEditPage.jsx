@@ -8,13 +8,18 @@ const validator = CreateAsyncQueryValidator({error: "Nepovedlo se načíst subje
 export const SubjectEditPage = ()  => {
     const {id} = useParams()
     const [onResolve, onReject] = validator(useDispatch())
-    const [Subject, userPromise] = useFreshItem({id}, FetchSubjectByIdAsyncAction)
+    const [subject, userPromise] = useFreshItem({id}, FetchSubjectByIdAsyncAction)
     userPromise.then(onResolve, onReject)
 
-    if (Subject) {
+    if (subject) {
         return (
-            <SubjectLargeCard subject={Subject}>
-                <SubjectEditCard subject={Subject} />
+            //<UserLargeCard user={user} />
+            //<div>
+            //    Události nahrány
+            //    {JSON.stringify(Subject)}
+            //</div>
+            <SubjectLargeCard subject={subject}>
+                <SubjectEditCard subject={subject} />
             </SubjectLargeCard>
         )
     } else {

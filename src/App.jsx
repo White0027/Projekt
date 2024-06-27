@@ -11,7 +11,7 @@ export const App = () => {
         <AppCanvas>
             <Navbar className='bg-light'>
                 <Container>
-                    <Navbar.Brand href="" className="justify-content-start">UOIS</Navbar.Brand>
+                    <Navbar.Brand href="/" className="justify-content-start">UOIS</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                         <LogButton />
