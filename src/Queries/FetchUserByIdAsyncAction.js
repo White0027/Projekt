@@ -1,7 +1,7 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
 const query = `query ($id: UUID!) {
-    result: userById(id: "2d9dc5ca-a4a2-11ed-b9df-0242ac120003") {
+    result: userById(id: $id) {
       __typename
       id
       name
