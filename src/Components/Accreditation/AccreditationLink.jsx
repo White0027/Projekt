@@ -19,6 +19,7 @@ export const AccreditationLink = ({accreditation, children, menu=true}) => {
                 <Dropdown.Menu>
                     <Dropdown.Item as={"div"}><ProxyLink to={"/accreditation/view/" + accreditation?.id} >Zobrazit</ProxyLink></Dropdown.Item>
                     <Dropdown.Item as={"div"}><ProxyLink to={"/accreditation/edit/" + accreditation?.id} >Editovat</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/subjects/edit/" + accreditation?.subjects?.id} >Editovat Předměty</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>         
             )

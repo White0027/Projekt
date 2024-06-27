@@ -19,6 +19,9 @@ const query = `query ($id: UUID!) {
         program {
           id
           name
+          grantsGroup {
+        name
+          }
         }
         semesters {
           id

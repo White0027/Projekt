@@ -17,10 +17,10 @@ export const SubjectLargeCard = ({subject, children, accreditation}) => {
                 <SubjectMediumCard subject={subject}/>
             </Col>
             <Col md={4}>
-                <SubjectLinkCard subject={subject}/>
+                {children}
             </Col>
             <Col md={4}>
-                {children}
+                <SubjectLinkCard subject={subject}/>
             </Col>
         </Row>
         <br />

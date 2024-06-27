@@ -48,8 +48,8 @@ export const SubjectMediumCard = ({subject}) => {
                 <Col>{subject?.createdby}</Col>
             </Row>
             <Row>
-                <Col>Téma hodiny:</Col>
-                <Col>{subject?.program?.name}</Col>
+                <Col>Garanti:</Col>
+                <Col>{subject?.program?.grantsGroup?.name}</Col>
             </Row>
         </CardCapsule> 
     )
