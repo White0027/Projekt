@@ -1,13 +1,30 @@
 import { CreateAsyncActionFromQuery } from "@hrbolek/uoisfrontend-shared/src"
 
 const query = `query ($id: UUID!) {
-    result: userById(id: $id) {
+    result: userById(id: "2d9dc5ca-a4a2-11ed-b9df-0242ac120003") {
       __typename
       id
       name
       surname
       fullname
       email
+      classifications {
+        id
+        order
+        date
+        level {
+          id
+          name
+        }
+        semester {
+          id
+          order
+          subject {
+            id
+            name
+          }
+        }
+      }
       university: memberOf(grouptypeId: "cd49e152-610c-11ed-9f29-001a7dda7110") {
         __typename
         id
@@ -52,6 +69,7 @@ const query = `query ($id: UUID!) {
         }
       }
     }
-  }`
+  }
+`
 
 export const FetchUserByIdAsyncAction = CreateAsyncActionFromQuery(query)

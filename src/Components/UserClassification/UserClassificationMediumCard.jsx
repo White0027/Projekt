@@ -8,27 +8,27 @@ export const UserClassificationMediumCard = ({userclassification}) => {
         <CardCapsule title={"Uživatelská klasifikace - atributy "}>
             <Row>
                 <Col>Název</Col>
-                <Col>{userclassification?.order}</Col>
+                <Col>{userclassification?.fullname}</Col>
             </Row>
             <Row>
                 <Col>Jméno studenta</Col>
-                <Col>{userclassification?.student?.name}</Col>
+                <Col>{userclassification?.classifications?.order}</Col>
             </Row>
             <Row>
                 <Col>Poslední změna</Col>
-                <Col>{userclassification?.lastchange}</Col>
+                <Col>{userclassification?.classifications?.date}</Col>
             </Row>
             <Row>
                 <Col>Známka</Col>
-                <Col>{userclassification?.level?.name}</Col>
+                <Col>{userclassification?.classifications?.level?.name}</Col>
             </Row>
             <Row>
                 <Col>Datum</Col>
-                <Col>{userclassification?.date}</Col>
+                <Col>{userclassification?.classifications?.semester?.order}</Col>
             </Row>
             <Row>
                 <Col>Zapsal:</Col>
-                <Col>{userclassification?.createdby}</Col>
+                <Col>{userclassification?.classifications?.semester?.subject?.name}</Col>
             </Row>
         </CardCapsule>
     )
