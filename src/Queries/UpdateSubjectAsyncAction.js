@@ -1,21 +1,14 @@
 import { CreateAsyncActionFromMutation } from "@hrbolek/uoisfrontend-shared/src"
 
 const mutation = `	
-mutation($id: UUID!, $lastchange: DateTime!, $name: String)
+mutation($id: UUID!, $name: String)
 {
   result: programUpdate(program: 
   {	id: $id,
-    lastchange: $lastchange,
     name: $name, })
   {
     id
     msg
-    result: program
-    {
-      id
-      lastchange
-      name
-    }
   }
 }
 `
