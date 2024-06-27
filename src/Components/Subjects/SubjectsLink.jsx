@@ -1,8 +1,8 @@
 import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src';
 
-export const SubjectsLink = ({subjects}) => {
+export const SubjectsLink = ({accreditation}) => {
         return (
-            <ProxyLink to={"/subjects/edit/" + subjects?.id}>{"Předměty:"}</ProxyLink>     
+            <ProxyLink to={"/subjects/edit/" + accreditation?.subjects?.id}>{"Předměty:"}</ProxyLink>     
             )
         }
 
