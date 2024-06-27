@@ -3,7 +3,7 @@ import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src';
 
 export const SubjectLink_ = ({subject, children}) => {
     return (
-        <ProxyLink to={"/granting/subject/view/" + subject?.id}>{children?children:subject?.name}</ProxyLink>
+        <ProxyLink to={"/subject/view/" + subject?.id}>{children?children:subject?.name}</ProxyLink>
     )
 }
 
@@ -29,21 +29,21 @@ export const SubjectLink = ({subject, children, menu=true}) => {
     }
 }
 
-export const SujbectCreateLink = ({menu=true}) => {
-    if (menu) {
-        return (
-            <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
-                Předmět:
-                <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    <Dropdown.Item as={"div"} ><ProxyLink to={"/subject/create"} >Vytvořit</ProxyLink></Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
-        )
-    } else {
-        return (
-            <div>Error</div>
-        )
-    }
-}
+// export const SujbectCreateLink = ({menu=true}) => {
+//     if (menu) {
+//         return (
+//             <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
+//                 Předmět:
+//                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
+//                 </Dropdown.Toggle>
+//                 <Dropdown.Menu>
+//                     <Dropdown.Item as={"div"} ><ProxyLink to={"/subject/create"} >Vytvořit</ProxyLink></Dropdown.Item>
+//                 </Dropdown.Menu>
+//             </Dropdown>
+//         )
+//     } else {
+//         return (
+//             <div>Error</div>
+//         )
+//     }
+// }

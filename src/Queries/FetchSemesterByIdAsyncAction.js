@@ -27,6 +27,7 @@ const query = `query ($id: UUID!) {
           id
         }
         topics {
+          name
           id
         }
       }

@@ -3,6 +3,8 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { SemesterMediumCard } from './SemesterMediumCard'
 import { SemesterLink } from './SemesterLink'
+import { SemesterLinkCard } from './SemesterLinkCard'
+import { SemesterRawCard } from './SemesterRawCard'
 
 export const SemesterLargeCard = ({semester, children}) => {
     return (
@@ -11,21 +13,21 @@ export const SemesterLargeCard = ({semester, children}) => {
             <SemesterLink semester={semester} menu={true}></SemesterLink>
         </div>}>
         <Row>
-            <Col md={3}>
+            <Col md={4}>
                 <SemesterMediumCard semester={semester}/>
             </Col>
-            <Col md={6}>
+            <Col md={4}>
+                <SemesterLinkCard semester={semester}/>
+            </Col>
+            <Col md={4}>
                 {children}
             </Col>
-            <Col md={3}>
-                <SemesterMediumCard semester={semester}/>
-            </Col>
             
-        </Row>
+            </Row>
         <br />
         <Row>
             <Col>
-                {JSON.stringify(semester)}
+                <SemesterRawCard semester={semester}/>
             </Col>
         </Row>
     </CardCapsule>

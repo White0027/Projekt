@@ -13,11 +13,6 @@ export const SemesterEditPage = ()  => {
 
     if (Semester) {
         return (
-            //<UserLargeCard user={user} />
-            //<div>
-            //    Události nahrány
-            //    {JSON.stringify(Semester)}
-            //</div>
             <SemesterLargeCard semester={Semester}>
                 <SemesterEditCard semester={Semester} />
             </SemesterLargeCard>

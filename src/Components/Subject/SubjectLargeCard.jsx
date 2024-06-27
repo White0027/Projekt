@@ -3,8 +3,10 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { SubjectMediumCard } from './SubjectMediumCard'
 import { SubjectLink } from './SubjectLink'
+import { SubjectLinkCard } from './SubjectLinkCard'
+import { SubjectRawCard } from './SubjectRawCard'
 
-export const SubjectLargeCard = ({subject, children}) => {
+export const SubjectLargeCard = ({subject, children, accreditation}) => {
     return (
         <CardCapsule title={<div>
             <span>Předmět: </span>
@@ -15,17 +17,16 @@ export const SubjectLargeCard = ({subject, children}) => {
                 <SubjectMediumCard subject={subject}/>
             </Col>
             <Col md={4}>
-                {children}
+                <SubjectLinkCard subject={subject}/>
             </Col>
             <Col md={4}>
-                <SubjectMediumCard subject={subject}/>
+                {children}
             </Col>
-            
         </Row>
         <br />
         <Row>
             <Col>
-                {JSON.stringify(subject)}
+                <SubjectRawCard subject={subject}/>
             </Col>
         </Row>
     </CardCapsule>

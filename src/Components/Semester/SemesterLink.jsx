@@ -3,7 +3,7 @@ import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src';
 
 export const SemesterLink_ = ({semester, children}) => {
     return (
-        <ProxyLink to={"/granting/semester/view/" + semester?.id}>{children?children:semester?.name}</ProxyLink>
+        <ProxyLink to={"/semester/view/" + semester?.id}>{children?children:semester?.order}</ProxyLink>
     )
 }
 
@@ -29,21 +29,21 @@ export const SemesterLink = ({semester, children, menu=true}) => {
     }
 }
 
-export const SemesterCreateLink = ({menu=true}) => {
-    if (menu) {
-        return (
-            <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
-                Semestr:
-                <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                    <Dropdown.Item as={"div"} ><ProxyLink to={"/semester/create"} >Vytvořit</ProxyLink></Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
-        )
-    } else {
-        return (
-            <div>Error</div>
-        )
-    }
-}
+// export const SemesterCreateLink = ({menu=true}) => {
+//     if (menu) {
+//         return (
+//             <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
+//                 Semestr:
+//                 <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm">
+//                 </Dropdown.Toggle>
+//                 <Dropdown.Menu>
+//                     <Dropdown.Item as={"div"} ><ProxyLink to={"/semester/create"} >Vytvořit</ProxyLink></Dropdown.Item>
+//                 </Dropdown.Menu>
+//             </Dropdown>
+//         )
+//     } else {
+//         return (
+//             <div>Error</div>
+//         )
+//     }
+// }

@@ -3,7 +3,7 @@ import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src';
 
 export const AccreditationLink_ = ({accreditation, children}) => {
     return (
-        <ProxyLink to={"/granting/accreditation/view/" + accreditation?.id}>{children?children:accreditation?.name}</ProxyLink>
+        <ProxyLink to={"/accreditation/view/" + accreditation?.id}>{children?children:accreditation?.name}</ProxyLink>
     )
 }
 
