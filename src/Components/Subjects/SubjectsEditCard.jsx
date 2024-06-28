@@ -1,16 +1,17 @@
-import { CardCapsule} from '@hrbolek/uoisfrontend-shared/src'
+import { CardCapsule, EditableAttributeText } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
+import { UpdateSubjectAsyncAction } from '../../Queries/UpdateSubjectAsyncAction'
 
-//Do SubjectsEditCard mi udělej tabulku, ve které se vypíšou všechny předměty za sebou.
-//Vypiš mi pouze název daného předmětu.
 export const SubjectsEditCard = ({subjects}) => {
     return (
-        <CardCapsule title={"Předměty"}>
+        <CardCapsule title={"Editace " + subjects?.name}>
             <Row>
-                <Col>
-                
-                </Col>
+                <Col>Název</Col>
+                <Col>{subjects?.name}</Col>
+            </Row>
+            <Row>
+                <EditableAttributeText item={subjects} attributeName="name" label="Název" asyncUpdater={UpdateSubjectAsyncAction} />
             </Row>
         </CardCapsule>
     )

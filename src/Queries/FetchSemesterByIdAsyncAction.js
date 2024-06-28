@@ -18,6 +18,10 @@ const query = `query ($id: UUID!) {
         subject {
           id
           name
+          program {
+            id
+            name
+          }
         }
         classificationType {
           id

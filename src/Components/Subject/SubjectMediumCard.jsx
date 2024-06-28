@@ -13,7 +13,7 @@ export const SubjectMediumCard = ({subject}) => {
                 <Col>
                 <Dropdown className="d-inline mx-2" autoClose="outside" size="sm">
                     <ProxyLink to={`/accreditation/view/${subject?.program?.id}`}>
-                        {"IT Technologie"}
+                        {subject?.program?.name}
                     </ProxyLink>
                     <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm" />
                     <Dropdown.Menu>

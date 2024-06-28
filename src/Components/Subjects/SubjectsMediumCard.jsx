@@ -7,13 +7,13 @@ import Dropdown from 'react-bootstrap/Dropdown'
 
 export const SubjectsMediumCard = ({subjects}) => {
     return (
-        <CardCapsule title={"Předmět - atributy "}>
+        <CardCapsule title={"Předměty - atributy "}>
             <Row>
                 <Col>Akreditace:</Col>
                 <Col>
                 <Dropdown className="d-inline mx-2" autoClose="outside" size="sm">
                     <ProxyLink to={`/accreditation/view/${subjects?.program?.id}`}>
-                        {"IT Technologie"}
+                        {subjects?.program?.name}
                     </ProxyLink>
                     <Dropdown.Toggle split variant='secondary-outline' id="dropdown-basic" size="sm" />
                     <Dropdown.Menu>
@@ -48,8 +48,8 @@ export const SubjectsMediumCard = ({subjects}) => {
                 <Col>{subjects?.createdby}</Col>
             </Row>
             <Row>
-                <Col>Téma hodiny:</Col>
-                <Col>{subjects?.program?.name}</Col>
+                <Col>Garanti:</Col>
+                <Col>{subjects?.program?.grantsGroup?.name}</Col>
             </Row>
         </CardCapsule> 
     )

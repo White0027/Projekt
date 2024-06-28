@@ -1,4 +1,7 @@
-import { Dropdown } from "react-bootstrap";
+import React from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import { Dropdown } from 'react-bootstrap';
 import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src';
 
 export const AccreditationLink_ = ({accreditation, children}) => {
@@ -19,7 +22,17 @@ export const AccreditationLink = ({accreditation, children, menu=true}) => {
                 <Dropdown.Menu>
                     <Dropdown.Item as={"div"}><ProxyLink to={"/accreditation/view/" + accreditation?.id} >Zobrazit</ProxyLink></Dropdown.Item>
                     <Dropdown.Item as={"div"}><ProxyLink to={"/accreditation/edit/" + accreditation?.id} >Editovat</ProxyLink></Dropdown.Item>
-                    <Dropdown.Item as={"div"}><ProxyLink to={"/subjects/edit/" + accreditation?.subjects?.id} >Editovat Předměty</ProxyLink></Dropdown.Item>
+                    <Dropdown.Item as="div">
+                    {accreditation?.subjects.map(subject => (
+                        <Row key={subject.id} className="mb-2">
+                        <Col>
+                            <ProxyLink to={`/subjects/edit/${subject.id}`}>
+                            Editovat Předmět - {subject.name}
+                            </ProxyLink>
+                        </Col>
+                        </Row>
+                    ))}
+                    </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>         
             )
