@@ -17,10 +17,10 @@ export const SemesterLargeCard = ({semester, children}) => {
                 <SemesterMediumCard semester={semester}/>
             </Col>
             <Col md={4}>
-                <SemesterLinkCard semester={semester}/>
+                {children}
             </Col>
             <Col md={4}>
-                {children}
+                <SemesterLinkCard semester={semester}/>
             </Col>
             
             </Row>

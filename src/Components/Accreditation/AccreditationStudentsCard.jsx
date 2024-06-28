@@ -1,13 +1,15 @@
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src';
 import { SortableTable } from '../Misc/SortableTable.jsx';
 import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src';
-const UserShort = ({ fullname }) => {
+import { UserLink } from '@hrbolek/uoisfrontend-users/src'
+
+const UserShort = ({user}) => {
     return (
         <>
-            {fullname} <br />
+            <UserLink user={user} /> <br/>
         </>
-    );
-};
+    )
+}
 
 export const AccreditationStudentsCard = ({ accreditation, title = "Studenti" }) => {
     const columns = [
