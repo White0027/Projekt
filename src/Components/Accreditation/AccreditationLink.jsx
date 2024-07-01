@@ -33,6 +33,7 @@ export const AccreditationLink = ({accreditation, children, menu=true}) => {
                         </Row>
                     ))}
                     </Dropdown.Item>
+                    <Dropdown.Item as={"div"}><ProxyLink to={"/userclassification/view/" + accreditation?.students[0].id} >Klasifikace za semestr</ProxyLink></Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>         
             )

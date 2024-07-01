@@ -21,11 +21,22 @@ export const AccreditationStudentsCard = ({ accreditation, title = "Studenti" })
 
     return (
         <CardCapsule title={title}>
-            <SortableTable
-                columns={columns}
-                data={data}
-                renderRow={renderRow}
-            />
+            <table className="table table-sm table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {data.map((row, index) => (
+                        <tr key={index}>
+                            <td>{row.user.fullname}</td>
+                            <td>{row.user.fullname}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>	
         </CardCapsule>
     );
 };

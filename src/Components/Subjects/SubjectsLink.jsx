@@ -7,7 +7,8 @@ export const SubjectsLink = ({subjects, children}) => {
     )
 }
 
-// export const SujbectCreateLink = ({menu=true}) => {
+
+// export const SujbectsCreateLink = ({menu=true}) => {
 //     if (menu) {
 //         return (
 //             <Dropdown  className="d-inline mx-2" autoClose="outside" size="sm">
