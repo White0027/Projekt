@@ -2,10 +2,11 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { UserClassificationMediumCard } from './UserClassificationMediumCard'
+import { UserClassificationRawCard } from './UserClassificationRawCard'
 
 export const UserClassificationLargeCard = ({userclassification, children}) => {
     return (
-        <CardCapsule title={"Uživatelská klasifikace " + userclassification?.order}>
+        <CardCapsule title={"Klasifikace uživatele " + userclassification?.fullname}>
         <Row>
             <Col md={3}>
                 <UserClassificationMediumCard userclassification={userclassification}/>
@@ -21,7 +22,7 @@ export const UserClassificationLargeCard = ({userclassification, children}) => {
         <br />
         <Row>
             <Col>
-                {JSON.stringify(userclassification)}
+            <UserClassificationRawCard userclassification={userclassification}/>
             </Col>
         </Row>
     </CardCapsule>
