@@ -12,6 +12,9 @@
 
 > 10.5 až 17.5 - příprava na druhý projektový den
 - dodělání nedostatkiů a příprava na prezentaci projektu na druhý projektový den
+  
+> 18.5. až 7.7. - příprava na poslední projektový den a finalizace projektu
+- zprovoznění update u jednotlivých komponent, vypsání studentů u akreditace, úpravy view page
 
 # Deník
 
@@ -41,7 +44,19 @@ Tvoříme první základní strukturu našich Pages a pracujeme s daty k nim př
 View pages hotové, začínáme tvořit Edit pages.
 ```
 
+> 24.5.2024
+
+...
+zprovoznění update u Subject
+...
+
 > 29.5.2024
 
 ```
 Dodělávání view pages do finální verze, ůpravy tabulek.
+
+> 15.6.2024
+
+...
+Úpravy všech komponent do finální podoby
+
