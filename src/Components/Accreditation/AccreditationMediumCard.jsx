@@ -3,6 +3,7 @@ import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { AccreditationLink } from './AccreditationLink'
+import { GroupLink } from '../Group/GroupLink'
 
 export const AccreditationMediumCard = ({accreditation}) => {
     return (
@@ -25,11 +26,11 @@ export const AccreditationMediumCard = ({accreditation}) => {
             </Row>
             <Row>
                 <Col>Garanti:</Col>
-                <Col>{accreditation?.grantsGroup?.name}</Col>
+                <Col>{accreditation?.grantsGroup?<GroupLink group={accreditation?.grantsGroup} menu={true} />:"Nenalezeno"}</Col>
             </Row>
             <Row>
-                <Col>Usketočňovatel:</Col>
-                <Col>{accreditation?.licencedGroup?.name}</Col>
+                <Col>Uskutečňovatel:</Col>
+                <Col>{accreditation?.licencedGroup?<GroupLink group={accreditation?.licencedGroup} menu={true} />:"Nenalezeno"}</Col>
             </Row>
         </CardCapsule>
     )
