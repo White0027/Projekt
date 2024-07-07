@@ -4,6 +4,7 @@ import { SortableTable } from "../Misc/SortableTable.jsx";
 import { ProxyLink } from "@hrbolek/uoisfrontend-shared/src";
 import Col from 'react-bootstrap/Col';
 import Dropdown from 'react-bootstrap/Dropdown';
+import { AccreditationLink } from "./AccreditationLink.jsx";
 
 
 export const AccreditationLinkCard = ({ accreditation }) => {
@@ -37,7 +38,7 @@ export const AccreditationLinkCard = ({ accreditation }) => {
 };
 
     return (
-        <CardCapsule title={<>Přeměty pro: {accreditation?.name}</>}>
+        <CardCapsule title={<>Přeměty pro: <AccreditationLink accreditation={accreditation} menu={true}></AccreditationLink></>}>
             <SortableTable
                 columns={columns}
                 data={accreditation?.subjects}
