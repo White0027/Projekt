@@ -21,6 +21,13 @@ const query = `query ($id: UUID!) {
           program {
             id
             name
+            students {
+              id
+              student {
+                id
+                fullname
+              }
+            }
           }
         }
         classificationType {

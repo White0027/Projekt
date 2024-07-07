@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src'
 import Dropdown from 'react-bootstrap/Dropdown'
+import { GroupLink } from '../Group/GroupLink'
 
 export const SubjectMediumCard = ({subject}) => {
     return (
@@ -45,11 +46,11 @@ export const SubjectMediumCard = ({subject}) => {
             </Row>
             <Row>
                 <Col>Vytvořil:</Col>
-                <Col>{subject?.createdby}</Col>
+                <Col>{subject?.createdby??"Nenalezeno"}</Col>
             </Row>
             <Row>
                 <Col>Garanti:</Col>
-                <Col>{subject?.program?.grantsGroup?.name}</Col>
+                <Col>{subject?.program?.grantsGroup?<GroupLink group={subject?.program?.grantsGroup} menu={true} />:"Nenalezeno"}</Col>
             </Row>
         </CardCapsule> 
     )

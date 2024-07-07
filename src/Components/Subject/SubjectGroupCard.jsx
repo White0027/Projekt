@@ -1,12 +1,12 @@
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src';
 import { UserLink } from '@hrbolek/uoisfrontend-users/src';
 
-export const AccreditationStudentsCard = ({ accreditation, title = "Studenti" }) => {
+export const SubjectGroupCard = ({ subject, title = "Studenti" }) => {
     const columns = [
         { key: 'fullname', label: 'Celé jméno' }
     ];
 
-    const students = accreditation?.students || [];
+    const students = subject?.program?.students || [];
     const data = students.map(student => ({
         id: student?.student?.id,
         user: student?.student
