@@ -1,5 +1,6 @@
 import { CardCapsule } from '@hrbolek/uoisfrontend-shared/src';
 import { UserLink } from '@hrbolek/uoisfrontend-users/src';
+import { ProxyLink } from '@hrbolek/uoisfrontend-shared/src';
 
 export const AccreditationStudentsCard = ({ accreditation, title = "Studenti" }) => {
     const columns = [
@@ -9,7 +10,7 @@ export const AccreditationStudentsCard = ({ accreditation, title = "Studenti" })
     const students = accreditation?.students || [];
     const data = students.map(student => ({
         id: student?.student?.id,
-        user: student?.student
+        user: student?.student,
     }));
 
     return (
@@ -18,7 +19,7 @@ export const AccreditationStudentsCard = ({ accreditation, title = "Studenti" })
                 <thead>
                     <tr>
                         <th>Celé Jméno</th>
-                        <th></th>
+                        <th>Klasifikace</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -27,7 +28,9 @@ export const AccreditationStudentsCard = ({ accreditation, title = "Studenti" })
                             <td>
                                 <UserLink user={row.user}>{row.user.fullname}</UserLink>
                             </td>
-                            <td>{row.user.fullname}</td>
+                            <td>
+                                <ProxyLink to={`/userclassification/view/${row.id}`}>Klasifikace za semestr</ProxyLink>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
@@ -35,4 +38,3 @@ export const AccreditationStudentsCard = ({ accreditation, title = "Studenti" })
         </CardCapsule>
     );
 };
-

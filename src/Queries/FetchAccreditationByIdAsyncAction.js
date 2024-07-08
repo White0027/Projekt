@@ -30,6 +30,10 @@ const query = `query($id: UUID!){
       student {
         id
         fullname
+        classifications {
+          id
+          order
+        }
       }
     }
   }
